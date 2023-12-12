@@ -26,7 +26,7 @@ public class Interactable : UdonSharpBehaviour
         {
             gotSandBags = false;
             sandBags += 1;
-            //scoreText.text = sandBags.ToString();
+            scoreText.text = sandBags.ToString();
             Debug.Log(sandBags);
         }
         
