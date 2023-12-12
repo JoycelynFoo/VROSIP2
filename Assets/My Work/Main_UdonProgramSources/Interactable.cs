@@ -13,12 +13,13 @@ public class Interactable : UdonSharpBehaviour
     public TextMeshPro scoreText;
 
     public GameObject glassWall;
+    public GameObject glassDoor;
 
     private void Update()
     {   
         if (sandBags == 3)
         {
-            
+            Destroy(glassDoor);
             Destroy(glassWall);
         }
 
