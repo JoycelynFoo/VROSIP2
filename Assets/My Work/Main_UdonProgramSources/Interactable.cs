@@ -35,7 +35,7 @@ public class Interactable : UdonSharpBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name.Contains("sandBagTossBoard"))
+        if (other.gameObject.name.Contains("sandBag"))
         {
             gotSandBags = true;
 
