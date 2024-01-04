@@ -3,7 +3,6 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
-using UnityEngine.UI;
 using TMPro;
 
 public class Basketball : UdonSharpBehaviour
@@ -11,6 +10,7 @@ public class Basketball : UdonSharpBehaviour
     private bool ballIn = false;
     private int balls = 0;
     public TextMeshPro scoreTextBall;
+    public GameObject wall;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +25,7 @@ public class Basketball : UdonSharpBehaviour
     {
         if (balls == 3)
         {
+            Destroy(wall);
             Debug.Log("3 balls are in");
         }
         if (ballIn == true)
