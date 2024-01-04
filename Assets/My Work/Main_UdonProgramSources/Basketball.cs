@@ -6,8 +6,16 @@ using VRC.Udon;
 
 public class Basketball : UdonSharpBehaviour
 {
-    void Start()
+    private bool ballIn = false;
+
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.name.Contains("bball"))
+        {
+            ballIn = true;
+            Debug.Log("Bball In");
+        }
     }
+
 }
